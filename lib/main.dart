@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gym_app/screens/auth/forogot_pasword_screen.dart';
 import 'package:gym_app/screens/auth/login_screen.dart';
 import 'package:gym_app/screens/auth/register_screen.dart';
 
@@ -15,6 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
+        scaffoldBackgroundColor: Colors.white,
         colorScheme: ColorScheme.fromSwatch()
             .copyWith(primary: const Color(0xffF05D22), secondary: Colors.white),
         appBarTheme: const AppBarTheme(
@@ -30,7 +32,10 @@ class MyApp extends StatelessWidget {
         ),
       ),
       home: const LoginScreen(),
-      routes: {RegisterScreen.routeName: (context) => const RegisterScreen()},
+      routes: {
+        RegisterScreen.routeName: (context) => const RegisterScreen(),
+        ForgotPasswordScreen.routeName: (context) => const ForgotPasswordScreen(),
+      },
     );
   }
 }
