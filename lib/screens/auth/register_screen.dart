@@ -10,7 +10,7 @@ class RegisterScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Register'),
       ),
-      body: const RegisterWidget(),
+      body: const RegisterForm(),
     );
   }
 }
